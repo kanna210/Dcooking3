@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savory Recipes</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .button-container {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button.easiness {
+            background-color: #4caf50;
+            color: white;
+        }
+        button.easiness:hover {
+            background-color: #45a049;
+        }
+        button.alphabetical {
+            background-color: #2196f3;
+            color: white;
+        }
+        button.alphabetical:hover {
+            background-color: #1e88e5;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+    </style>
+    <script>
+        const recipesByEasiness = [
+            "Grilled Potatoes",
+            "Grilled Corn",
+            "Easy Fried Rice",
+            "Simple Bread",
+            "Chinese Vegetable Fry with Meat",
+            "Chili",
+            "Potato Soup",
+            "Tomato Pasta",
+            "Bolognese Pasta",
+            "Fried Chicken",
+            "Curry",
+            "Sicilian Pizza"
+        ];
+
+        const recipesAlphabetical = [...recipesByEasiness].sort();
+
+        function displayRecipes(recipes) {
+            const recipeList = document.getElementById('recipe-list');
+            recipeList.innerHTML = '';
+            recipes.forEach(recipe => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.textContent = recipe;
+                if (recipe === "Grilled Potatoes") {
+                    link.href = 'grilledPotatoes.html';
+                } else if (recipe === "Potato Soup") {
+                    link.href = 'potatoSoup.html';
+                } else {
+                    link.href = `#${recipe.replace(/\s+/g, '-').toLowerCase()}`;
+                }
+                listItem.appendChild(link);
+                recipeList.appendChild(listItem);
+            });
+        }
+
+        function showEasinessOrder() {
+            displayRecipes(recipesByEasiness);
+        }
+
+        function showAlphabeticalOrder() {
+            displayRecipes(recipesAlphabetical);
+        }
+
+        window.onload = function() {
+            showEasinessOrder();
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Savory Recipes</h1>
+        <div class="button-container">
+            <button class="easiness" onclick="showEasinessOrder()">Order by Easiness</button>
+            <button class="alphabetical" onclick="showAlphabeticalOrder()">Order Alphabetically</button>
+        </div>
+        <ul id="recipe-list"></ul>
+    </div>
+</body>
+</html>
