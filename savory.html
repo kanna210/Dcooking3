@@ -57,6 +57,7 @@
         const recipesByEasiness = [
             "Grilled Potatoes",
             "Grilled Corn",
+            "Stake",
             "Easy Fried Rice",
             "Simple Bread",
             "Chinese Vegetable Fry with Meat",
@@ -80,6 +81,10 @@
                 link.textContent = recipe;
                 if (recipe === "Grilled Potatoes") {
                     link.href = 'grilledPotatoes.html';
+                } else if (recipe === "Grilled Corn") {
+                    link.href = 'grilledCorn.html';
+                } else if (recipe === "Stake") {
+                    link.href = 'stake.html';
                 } else if (recipe === "Potato Soup") {
                     link.href = 'potatoSoup.html';
                 } else {
