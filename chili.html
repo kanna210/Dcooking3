@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chili Recipe</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #c32814e9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul, ol {
+    background: #fff;
+    padding: 20px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li, ol li {
+    margin: 10px 0;
+}
+
+ul li::before {
+    content: "•";
+    color: #e8491d;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+ol li {
+    counter-increment: step-counter;
+}
+
+ol li::before {
+    content: counter(step-counter) ". ";
+    color: #e8491d;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chili Recipe🫘</h1>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>2 pounds lean ground beef</li>
+            <li>1 onion, diced</li>
+            <li>1 jalapeño, seeded and finely diced</li>
+            <li>2 ½ tablespoons chili powder, divided</li>
+            <li>1 teaspoon cumin</li>
+            <li>1 green bell pepper, seeded and diced</li>
+            <li>29 ounces crushed or diced tomatoes (2 cans)</li>
+            <li>19 ounces canned red kidney beans, drained</li>
+            <li>1 ½ cups beef broth</li>
+            <li>(optional: 1 cup beer, 4 cloves garlic minced, 1 tablespoon brown sugar, sour cream)</li>
+            <li>3-6g salt</li>
+            <li>black pepper</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Combine ground beef and 1 ½ tablespoons chili powder in a saucepan.</li>
+            <li>In a large pot, fry ground beef, onion, jalapeño.</li>
+            <li>Add in remaining ingredients and bring to a boil. Reduce heat and simmer uncovered for 45 minutes or until chili has reached desired thickness.</li>
+            <li>Top with cheddar cheese, green onions, or other favorite toppings.</li>
+        </ol>
+    </div>
+</body>
+</html>
