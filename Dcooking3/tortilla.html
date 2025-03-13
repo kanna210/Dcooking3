@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tortilla Recipe</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5e6cc;
+    background-image: url('tortilla-pattern.png'); /* Add your tortilla pattern image here */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul, ol {
+    background: #fff;
+    padding: 20px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li, ol li {
+    margin: 10px 0;
+}
+
+ul li::before {
+    content: "•";
+    color: #e8491d;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+ol li {
+    counter-increment: step-counter;
+}
+
+ol li::before {
+    content: counter(step-counter) ". ";
+    color: #e8491d;
+    font-weight: bold;
+}
+
+.video {
+    margin-top: 20px;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tortilla Recipe for 10-12 sheets</h1>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>300g flour</li>
+            <li>30g flour</li>
+            <li>Flour when you flat them</li>
+            <li>100g butter</li>
+            <li>230-240g warm water</li>
+            <li>5g salt</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Mix all and add 30g flour.</li>
+            <li>Wait for 30 minutes.</li>
+            <li>Flatten thin.</li>
+            <li>Heat the pan to medium heat.</li>
+            <li>Cook 1 minute each side.</li>
+        </ol>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fA68XXQJN4Y?si=gsIfT4tJq1DwF5pB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</body>
+</html>
