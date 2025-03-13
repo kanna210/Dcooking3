@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bread Recipe</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(247, 223, 178);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    background: wheat;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul, ol {
+    background: #fff;
+    padding: 20px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li, ol li {
+    margin: 10px 0;
+}
+
+ul li::before {
+    content: "•";
+    color: #d78a32;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+ol li {
+    counter-increment: step-counter;
+}
+
+ol li::before {
+    content: counter(step-counter) ". ";
+    color: d78a32#d78a32;
+    font-weight: bold;
+}
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🥪Simple Bread 🍞</h1> <h3>no kneading needed:)</h3>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>151g flour</li>
+            <li>2g salt</li>
+            <li>1-2g yeast</li>
+            <li>4-20g sugar</li>
+            <li>120g water or 130g milk</li>
+            <li>5g oil or 8g butter</li>
+            <li>(optional: 10g oil, tomato, herbs, cheese)</li>
+        </ul>
+        <h2>Instructions</h2>
+        <ol>
+            <li>Mix water, sugar, and yeast.</li>
+            <li>Add flour and salt to step1.</li>
+            <li>Let the dough rise for 1 to 3 hours.</li>
+            <li>put the dough into the mold and wait for 30-45 minutes or until it becomes 1.5 times bigger</li>
+            <li>While waiting, preheat the oven to 350°F. Put the optional ingredients</li>
+            <li>After waiting 30-45 minutes from step 4, bake it for 18-22 minutes at 350°F.</li>
+        </ol>
+    </div>
+</body>
+</html>
