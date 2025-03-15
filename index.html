@@ -4,6 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enter Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
     <script>
         function checkName(event) {
             event.preventDefault();
@@ -11,17 +68,19 @@
             if (name === 'dylan') {
                 window.location.href = 'explosion.html';
             } else {
-                alert('Name is not "dylan". Please try again.');
+                alert('Thank you for visiting! Unfortunately, this is not the page for you.');
             }
         }
     </script>
 </head>
 <body>
-    <h1>Enter Your Name</h1>
-    <form onsubmit="checkName(event)">
-        <label for="nameInput">Name:</label>
-        <input type="text" id="nameInput" name="name" required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="form-container">
+        <h1>Enter Your Name</h1>
+        <form onsubmit="checkName(event)">
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
