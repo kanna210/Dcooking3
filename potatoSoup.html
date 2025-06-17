@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,89 +8,133 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            background-color: #fffdd0; /* Creamy color */
+            background-color: #fffdd0;
             margin: 0;
             padding: 0;
-        }
-        .container {
-            padding: 20px;
-        }
-        p {
-            text-align: left;
-            padding-left: 40px;
-        }
-        h1 {
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-        .video-container {
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #555;
+        }
+
+        .ingredients, .steps {
+            text-align: left;
             margin: 20px 0;
         }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        .video-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
+            border: none;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
         .potato-character {
-            width: 50px;
+            width: 60px;
             height: auto;
-            margin: 10px;
+            margin: 10px auto;
+            display: block;
             animation: bounce 2s infinite;
         }
+
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
             }
             40% {
-                transform: translateY(-30px);
+                transform: translateY(-20px);
             }
             60% {
-                transform: translateY(-15px);
+                transform: translateY(-10px);
             }
         }
-        footer {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            width: 100%;
-            text-align: center;
-        }
+
         .potato-comment {
-            color: #fff;
-            padding-left: 350px;
-            margin: 10px;
+            margin-top: 10px;
+            font-style: italic;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Potato Soup Recipe</h1>
-        <p>
-            -potato soup- on November 2nd 2024, you lated 10/10 [4 servings] <br>
-            6 strips uncooked bacon (about 28g per strip)<br>
-            43g butter<br>
-            2 yellow onion (320- 400g)<br>
-            7.5g salt<br>
-            42g all-purpose flour<br>
-            1.15 kg potatoes<br>
-            900- 945g chicken broth <br>
-            200-300g milk<br>
-            155g heavy cream<br>
-            (optional: cheese, black pepper, chili pepper, paprika powder)<br>
-        </p>
-        <p>
-            1 cut bacon, onion, potatos and fry ½ bacon in the pan until it becomes crispy <br>
-            2 remove becon for the topping later<br>
-            3 fry onion with butter and the rest of the bacon for 5-10 minutes then put flour and add chicken broth and potatoes<br>
-            (3* if you like meaty bacon, not crispy bacon, you can start from here* fry onion with butter and all bacon for 5-10 minutes then put flour and add chicken broth and potatoes)<br>
-            4 boil it for 10-15 minutes and then add milk, heavy milk, salt, black pepper and chili pepper<br>
-            5 simmer for 5 minutes
-        </p>
+
+        <h2>Ingredients (4 servings)</h2>
+        <div class="ingredients">
+            <ul>
+                <li>6 strips uncooked bacon (~28g per strip)</li>
+                <li>43g butter</li>
+                <li>2 yellow onions (320-400g)</li>
+                <li>7.5g salt</li>
+                <li>42g all-purpose flour</li>
+                <li>1.15kg potatoes</li>
+                <li>900-945g chicken broth</li>
+                <li>200-300g milk</li>
+                <li>155g heavy cream</li>
+                <li>(Optional) Cheese, black pepper, chili pepper, paprika powder</li>
+            </ul>
+        </div>
+
+        <h2>Steps</h2>
+        <div class="steps">
+            <ol>
+                <li>Fry onions and bacon with butter for 5-10 minutes.</li>
+                <li>Add flour and mix it. Add chicken broth, and potatoes.</li>
+                <li>Boil for 10-15 minutes, then add milk, heavy cream, salt, black pepper, and chili pepper.</li>
+                <li>Simmer for 5 minutes and serve with other toppings.</li>
+            </ol>
+        </div>
+
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jHq0RXIjAfk?si=PU1L7CarrgMbfLHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/jHq0RXIjAfk?si=PU1L7CarrgMbfLHc" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </br>
+                <figcaption>※This is the video instructions but you may want to use the recipe above</figcaption>
         </div>
     </div>
+
     <footer>
         <img src="images/potatoHeart.jpg" alt="Potato Character" class="potato-character">
         <div class="potato-comment">
-        <p>let's go D! im proud of you!</p>
-    </div>
+            <p>Let's go D! I'm proud of you for cooking!</p>
+        </div>
     </footer>
 </body>
+
 </html>

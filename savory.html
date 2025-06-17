@@ -79,10 +79,8 @@
                 const listItem = document.createElement('li');
                 const link = document.createElement('a');
                 link.textContent = recipe;
-                if (recipe === "Grilled Potatoes") {
-                    link.href = 'grilledPotatoes.html';
-                } else if (recipe === "Grilled Corn") {
-                    link.href = 'grilledCorn.html';
+                if (recipe === "Corn and Potatoes") {
+                    link.href = 'corn&potatoes.html';
                 } else if (recipe === "Stake") {
                     link.href = 'stake.html';
                 } else if (recipe === "Easy Fried Rice") {
@@ -98,7 +96,7 @@
                 } else if (recipe === "Chili") {
                     link.href = 'chili.html';
                 } else if (recipe === "Potato Soup") {
-                    link.href = 'potatoSoup.html';
+                    link.href = 'potatoSoup2.html';
                 } else {
                     link.href = `#${recipe.replace(/\s+/g, '-').toLowerCase()}`;
                 }
