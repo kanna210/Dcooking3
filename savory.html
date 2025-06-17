@@ -64,8 +64,6 @@
             "Breakfast burrito",
             "Chili",
             "Potato Soup",
-            "Pasta",
-            "Fried Chicken",
             "Sicilian Pizza"
         ];
 
@@ -96,6 +94,8 @@
                     link.href = 'chili.html';
                 } else if (recipe === "Potato Soup") {
                     link.href = 'potatoSoup.html';
+                } else if (recipe === "Sicilian Pizza") {
+                    link.href = 'sicilianPizza.html';
                 } else {
                     link.href = `#${recipe.replace(/\s+/g, '-').toLowerCase()}`;
                 }
